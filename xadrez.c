@@ -1,32 +1,52 @@
-#include <stdio.h>
+/**
+ * Programa de Simulação de Movimento de Peças de Xadrez
+ * 
+ * Este programa simula o movimento de três peças de xadrez:
+ * - Torre: Move-se na horizontal usando estrutura 'for'
+ * - Bispo: Move-se na diagonal usando estrutura 'while'
+ * - Rainha: Move-se na horizontal usando estrutura 'do-while'
+ */
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+ #include <stdio.h>
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
-}
+ int main() {
+     // Definição de constantes para o número de movimentos
+     const int TORRE_MOVIMENTOS = 5;   // Torre move 5 casas para a direita
+     const int BISPO_MOVIMENTOS = 5;   // Bispo move 5 casas na diagonal (cima e direita)
+     const int RAINHA_MOVIMENTOS = 8;  // Rainha move 8 casas para a esquerda
+     
+     // Separador para melhorar a visualização da saída
+     printf("\n=== Simulação de Movimento das Peças de Xadrez ===\n");
+     
+     // =========== Movimento da Torre ===========
+     // A Torre move-se em linha reta horizontalmente ou verticalmente
+     // Neste exemplo, a Torre move 5 casas para a direita usando 'for'
+     printf("\n--- Movimento da Torre (5 casas para a direita) ---\n");
+     for (int i = 1; i <= TORRE_MOVIMENTOS; i++) {
+         printf("Direita\n");
+     }
+     
+     // =========== Movimento do Bispo ===========
+     // O Bispo move-se na diagonal
+     // Neste exemplo, o Bispo move 5 casas na diagonal (cima e direita) usando 'while'
+     printf("\n--- Movimento do Bispo (5 casas na diagonal para cima e direita) ---\n");
+     int contadorBispo = 1;
+     while (contadorBispo <= BISPO_MOVIMENTOS) {
+         printf("Cima, Direita\n");
+         contadorBispo++;
+     }
+     
+     // =========== Movimento da Rainha ===========
+     // A Rainha pode mover-se em todas as direções
+     // Neste exemplo, a Rainha move 8 casas para a esquerda usando 'do-while'
+     printf("\n--- Movimento da Rainha (8 casas para a esquerda) ---\n");
+     int contadorRainha = 1;
+     do {
+         printf("Esquerda\n");
+         contadorRainha++;
+     } while (contadorRainha <= RAINHA_MOVIMENTOS);
+     
+     printf("\n=== Fim da Simulação de Movimento ===\n\n");
+     
+     return 0;
+ }
