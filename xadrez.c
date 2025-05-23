@@ -1,12 +1,3 @@
-/**
- * Programa de Simulação de Movimento de Peças de Xadrez
- * 
- * Este programa simula o movimento de três peças de xadrez:
- * - Torre: Move-se na horizontal usando estrutura 'for'
- * - Bispo: Move-se na diagonal usando estrutura 'while'
- * - Rainha: Move-se na horizontal usando estrutura 'do-while'
- */
-
  #include <stdio.h>
 
  int main() {
@@ -15,8 +6,7 @@
      const int BISPO_MOVIMENTOS = 5;   // Bispo move 5 casas na diagonal (cima e direita)
      const int RAINHA_MOVIMENTOS = 8;  // Rainha move 8 casas para a esquerda
      
-     // Separador para melhorar a visualização da saída
-     printf("\n=== Simulação de Movimento das Peças de Xadrez ===\n");
+    printf("\n=== Simulação de Movimento das Peças de Xadrez ===\n");
      
      // =========== Movimento da Torre ===========
      // A Torre move-se em linha reta horizontalmente ou verticalmente
